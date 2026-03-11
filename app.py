@@ -1,5 +1,5 @@
 print("Student App")
 
 name = input("Enter student name: ")
-
-print("Welcome", name)
+grade_system= input("Enter student grade: ")
+print("Grade system is", grade_system)

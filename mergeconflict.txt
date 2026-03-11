@@ -1,0 +1,71 @@
+
+C:\Users\Vishnu.S\Desktop\git-journey-with-me>git branch -r
+  origin/01-first-version
+  origin/HEAD -> origin/main
+  origin/main
+  origin/mergeconflict
+
+C:\Users\Vishnu.S\Desktop\git-journey-with-me>git pull 
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (1/1), done.
+remote: Total 3 (delta 1), reused 3 (delta 1), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 284 bytes | 4.00 KiB/s, done.
+From https://github.com/Vishnu-Sureshkumar/git-journey-with-me
+   bcb74ab..9818ecb  mergeconflict -> origin/mergeconflict
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> mergeconflict
+
+
+C:\Users\Vishnu.S\Desktop\git-journey-with-me>git pull origin mergeconflict
+From https://github.com/Vishnu-Sureshkumar/git-journey-with-me
+ * branch            mergeconflict -> FETCH_HEAD
+Updating bcb74ab..9818ecb
+Fast-forward
+ Mergedconflcit.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+C:\Users\Vishnu.S\Desktop\git-journey-with-me>git status
+On branch mergeconflict
+nothing to commit, working tree clean
+
+C:\Users\Vishnu.S\Desktop\git-journey-with-me>git log --oneline --decorate --graph -n 5
+* 9818ecb (HEAD -> mergeconflict, origin/mergeconflict) Edit mergedconflict.py
+* bcb74ab Add mergedconflict.py
+* ce46b37 (origin/main, origin/HEAD, main) Change errors.txt and add merge.txt
+*   c165e4f Merge pull request #1 from Vishnu-Sureshkumar/01-first-version
+|\
+| * f0161de (origin/01-first-version, 01-first-version) Add errors.txt
+
+C:\Users\Vishnu.S\Desktop\git-journey-with-me>git show bcb74ab
+commit bcb74ab4d94db0d053d64af1c58b4ebfb3dbaa25
+Author: S <Vishnu.S@motherson.com>
+Date:   Wed Mar 11 17:48:33 2026 +0530
+
+    Add mergedconflict.py
+
+diff --git a/Mergedconflcit.py b/Mergedconflcit.py
+new file mode 100644
+index 0000000..bbc7d49
+--- /dev/null
++++ b/Mergedconflcit.py
+@@ -0,0 +1,2 @@
++print("Merged conflcit")
++
+(END)
+
+diff --git a/Mergedconflcit.py b/Mergedconflcit.py
+new file mode 100644
+index 0000000..bbc7d49
+--- /dev/null
++++ b/Mergedconflcit.py
+@@ -0,0 +1,2 @@
++print("Merged conflcit")
++

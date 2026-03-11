@@ -1,2 +1,2 @@
-print("Merged conflcit")
+print("Merged conflcit done by Dev2") 
 

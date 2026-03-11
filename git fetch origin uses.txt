@@ -1,0 +1,46 @@
+Ah! yes — git fetch origin is super important in multi-clone workflows. Let me explain clearly.
+
+1️⃣ What git fetch origin does
+
+origin → is the default name of the remote repository (your GitHub repo)
+
+git fetch → tells Git:
+
+“Go to the remote repository (origin) and download all the updates, including branches, commits, tags, etc., but don’t change my local files yet.”
+
+2️⃣ Why we needed it
+
+In your second folder (git-journey-with-dev):
+
+You ran git branch → only saw main
+
+01-first-version was on GitHub but not yet in your local clone
+
+Running git fetch origin:
+
+git fetch origin
+
+Updated your clone’s knowledge of all remote branches
+
+After that, git branch -r showed:
+
+origin/01-first-version
+origin/main
+
+This means Git now knows about 01-first-version, it exists on the remote.
+
+3️⃣ Important point
+
+git fetch does not change your current branch or files
+
+It just updates remote-tracking branches
+
+Example: origin/01-first-version is a remote-tracking branch
+
+You still need to checkout a local branch to work on it:
+
+git checkout -b 01-first-version origin/01-first-version
+
+or in modern Git:
+
+git checkout 01-first-version

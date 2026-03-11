@@ -1,0 +1,28 @@
+C:\Users\Vishnu.S\Desktop\git-journey-with-me>git push origin 01-first-version
+To https://github.com/Vishnu-Sureshkumar/git-journey-with-me.git
+ ! [rejected]        01-first-version -> 01-first-version (fetch first)
+error: failed to push some refs to 'https://github.com/Vishnu-Sureshkumar/git-journey-with-me.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+C:\Users\Vishnu.S\Desktop\git-journey-with-me>
+
+becoz dev2 already pushed grade to remote
+
+
+
+C:\Users\Vishnu.S\Desktop\git-journey-with-me>git pull origin 01-first-version
+remote: Enumerating objects: 9, done.
+remote: Counting objects: 100% (9/9), done.
+remote: Compressing objects: 100% (6/6), done.
+remote: Total 7 (delta 1), reused 7 (delta 1), pack-reused 0 (from 0)
+Unpacking objects: 100% (7/7), 2.01 KiB | 27.00 KiB/s, done.
+From https://github.com/Vishnu-Sureshkumar/git-journey-with-me
+ * branch            01-first-version -> FETCH_HEAD
+   79775b7..e65f647  01-first-version -> origin/01-first-version
+Auto-merging app.py
+CONFLICT (content): Merge conflict in app.py
+Automatic merge failed; fix conflicts and then commit the result.

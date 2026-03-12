@@ -20,11 +20,11 @@ class DataStore(LanceModel):
     vector: Vector(model.ndims()) = model.VectorField()
 
 # create table if not exists
-table = db.create_table("rag_test", schema=DataStore, mode="create")
+table = db.create_table("rag_test", schema=DataStore, mode="overwrite")
 
 def ingest_documents():
 
-    documents = SimpleDirectoryReader("./data_source").load_data()
+    documents = SimpleDirectoryReader("./datasource").load_data()
 
     text_splitter = RecursiveCharacterTextSplitter.from_tiktoken_encoder(
         chunk_size=100,
